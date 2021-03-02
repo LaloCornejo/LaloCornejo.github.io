@@ -4,10 +4,15 @@
   }
   body {
     display: flex;
-    background: linear-gradient(90deg, rgba(0,0,32,1) 0%, rgb(67, 0, 100) 100%);
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(120deg, rgba(0,0,32,1) 10%, rgba(173,0,137,1) 100%);
     align-content: center;
     justify-content: center;
     overflow: hidden;
+  }
+  h1 {
+      text-align: center;
   }
   .emboss-txt {
     position: relative;
@@ -27,23 +32,27 @@
     2px 2px 1px rgb( 167, 167, 167),
     2px 3px 1px rgb( 167, 167, 167),
     2px 4px 1px rgb( 167, 167, 167),
+
+    3px 3px 1px rgb( 167, 167, 167),
+    3px 4px 1px rgb( 167, 167, 167),
+    3px 5px 1px rgb( 167, 167, 167),
     
-    1px 10px 30px rgba( 0, 0, 0, 0.8 ),
-    1px 10px 70px rgba( 0, 0, 0, 0.8 ),
+    1px 10px 30px rgba( 50, 50, 50, 0.5 ),
+    1px 10px 70px rgba( 50, 50, 50, 0.5 ),
     
-    0px 5px 5px rgba( 0, 0, 0, 0.8 ),
+    0px 5px 5px rgba( 50, 50, 50, 0.5 ),
 
     /*left shadow*/
-    -5px -5px 20px rgba( 0, 0, 0, 0.8 ),
+    -5px -5px 20px rgba( 50, 50, 50, 0.5 ),
 
     /*right shadow*/
-    5px 5px 20px rgba( 0, 0, 0, 0.8 ),
+    5px 5px 20px rgba( 50, 50, 50, 0.5 ),
 
     /*white light*/
     1px 1px 120px rgba( 250, 250, 250, 0.5 );
   }
   .emboss-txt::after{
-    content: "スケベ神";
+    content: "オタク";
     font-size: 180px;
     letter-spacing: 5px;
     color: rgb(207,207,207);
@@ -51,11 +60,12 @@
     top: 0;
     left: 0;
     text-shadow: 0px 0px 100px rgba( 11, 124, 199, 0.5 );
-    animation: cycle 10s linear infinite;
+    animation: cycle 7s linear infinite;
   }
   @keyframes cycle {
-    0% { text-shadow: 0px 0px 100px rgb(0, 153, 255);}
-    33% { text-shadow: 0px 0px 100px rgb(212, 0, 255);}
-    66% { text-shadow: 0px 0px 100px rgb(0, 255, 115);}
-    99% { text-shadow: 0px 0px 100px rgb(255, 0, 0);}
+    0% { text-shadow: 0px 0px 50px rgb(0, 238, 255);}
+    28% { text-shadow: 0px 0px 50px rgb(212, 0, 255);}
+    56% { text-shadow: 0px 0px 50px rgb(0, 255, 179);}
+    74% { text-shadow: 0px 0px 50px rgb(255, 0, 0);}
+    100% { text-shadow: 0px 0px 50px rgb(0, 238, 255);}
   }
