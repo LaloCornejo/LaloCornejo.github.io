@@ -1,0 +1,62 @@
+  @font-face {
+    font-family: BebasNeue;
+    src:url(BebasNeue-Regular.otf);
+  }
+  body {
+    display: flex;
+    background: linear-gradient(90deg, rgba(0,0,32,1) 0%, rgb(80, 0, 119) 100%);
+    align-content: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .emboss-txt {
+    position: relative;
+    font-size: 180px;
+    font-family: BebasNeue;
+    letter-spacing: 5px;
+    color:rgb(207,207,207);
+    text-shadow:
+    0px 0px 1px rgb( 167, 167, 167),
+    0px 1px 1px rgb( 167, 167, 167),
+    0px 2px 1px rgb( 167, 167, 167),
+
+    1px 1px 1px rgb( 167, 167, 167),
+    1px 2px 1px rgb( 167, 167, 167),
+    1px 3px 1px rgb( 167, 167, 167),
+
+    2px 2px 1px rgb( 167, 167, 167),
+    2px 3px 1px rgb( 167, 167, 167),
+    2px 4px 1px rgb( 167, 167, 167),
+    
+    1px 10px 30px rgba( 0, 0, 0, 0.8 ),
+    1px 10px 70px rgba( 0, 0, 0, 0.8 ),
+    
+    0px 5px 5px rgba( 0, 0, 0, 0.8 ),
+
+    /*left shadow*/
+    -5px -5px 20px rgba( 0, 0, 0, 0.8 ),
+
+    /*right shadow*/
+    5px 5px 20px rgba( 0, 0, 0, 0.8 ),
+
+    /*white light*/
+    1px 1px 120px rgba( 250, 250, 250, 0.5 );
+  }
+  .emboss-txt::after{
+    content: "Hello.";
+    font-size: 180px;
+    letter-spacing: 5px;
+    color: rgb(207,207,207);
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-shadow: 0px 0px 100px rgba( 11, 124, 199, 0.5 );
+    animation: cycle 10s linear infinite;
+  }
+  @keyframes cycle {
+    0% { text-shadow: 0px 0px 100px rgb(0, 153, 255);}
+    20% { text-shadow: 0px 0px 100px rgb(183, 0, 220);}
+    40% { text-shadow: 0px 0px 100px rgb(0, 211, 95);}
+    60% { text-shadow: 0px 0px 100px rgb(208, 0, 0);}
+    80% { text-shadow: 0px 0px 100px rgb(220, 99, 0);}
+  }
