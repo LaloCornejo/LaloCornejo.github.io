@@ -43,7 +43,7 @@
     1px 1px 120px rgba( 250, 250, 250, 0.5 );
   }
   .emboss-txt::after{
-    content: "Hello.";
+    content: "スケベ神";
     font-size: 180px;
     letter-spacing: 5px;
     color: rgb(207,207,207);
@@ -55,7 +55,7 @@
   }
   @keyframes cycle {
     0% { text-shadow: 0px 0px 100px rgb(0, 153, 255);}
-    20% { text-shadow: 0px 0px 100px rgb(212, 0, 255);}
-    40% { text-shadow: 0px 0px 100px rgb(0, 255, 115);}
-    60% { text-shadow: 0px 0px 100px rgb(255, 0, 0);}
+    33% { text-shadow: 0px 0px 100px rgb(212, 0, 255);}
+    66% { text-shadow: 0px 0px 100px rgb(0, 255, 115);}
+    99% { text-shadow: 0px 0px 100px rgb(255, 0, 0);}
   }
