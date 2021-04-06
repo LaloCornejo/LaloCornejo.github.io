@@ -6,18 +6,59 @@
     width: 100vw;
     height: 100vh;
     margin: 0;
-    background-color: rgb(173, 0, 156);
-    overflow-x: hidden;
-    overflow-y: auto;
+    animation: pulse 5s infinite;
+    overflow-x: hidden !important;
   }
-  .logo {
-    position: absolute;
-    top: 0px;
+  #preloader {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
     right: 0;
-    padding: 20px 30px 0px 0px;
+    bottom: 0;
+    left: 0;
+    z-index: 11000;
+    position: fixed;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0, 0, 0);
+    animation-name: fadeOut ;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+  }
+  
+  .loader {
+      display: block;
+      flex-wrap: wrap;
+      height: auto;
+  }
+  .loader img {
+    width: 100%;
+    height: auto;
+  }
+  @-webkit-keyframes fadeOut {
+    from {
+      opacity: 1; }
+    to {
+      opacity: 0; } 
+    }
+  @keyframes fadeOut {
+    from {
+      opacity: 1; }
+    to {
+      opacity: 0; } 
+    }
+  .fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut; 
+  }
+    .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px 0px 0px 20px;
     height: 50px;
-    -webkit-filter: brightness(0) invert(1);
-    filter: brightness(0) invert(1);
   }
   .container {
     display: flex;
@@ -37,11 +78,19 @@
     top: 28%;
     padding-left: 5%;
     padding-right: 5%;
+    align-items: center;
+    justify-content: center;
+  }
+  .img-prueba {
+    padding: 10px;
+    width: 700px;
+    border-radius: 30px;
   }
   .emboss-txt {
     position: relative;
-    font-size: 120px;
-    padding-top: 10px;
+    font-size: 150px;
+    font-weight: 550;
+    padding-top: 40px;
     font-family: BebasNeue;
     letter-spacing: 5px;
     color:rgb(255, 255, 255);
@@ -78,8 +127,9 @@
   }
   .emboss-txt::after{
     content: "オタク";
-    font-size: 120px;
-    padding-top: 10px;
+    font-size: 150px;
+    font-weight: 550;
+    padding-top: 40px;
     letter-spacing: 5px;
     color: rgb(255, 255, 255);
     position: absolute;
@@ -102,5 +152,16 @@
   .gradient {
     height: 100vh;
     width: 100vw;
-    background: linear-gradient(180deg, rgba(0,0,32,1) 10%, rgba(173, 0, 156, 0) 100%);
+    background: linear-gradient(180deg, rgba(0,0,32,1) 20%, rgba(173, 0, 156, 0) 100%);
+  }
+  .bkg-color{
+    height: 100vh;
+    width: 100vw;
+    animation: pulse 30s infinite;
+  }
+  @keyframes pulse {
+     0% { background: rgb(101, 0, 120) }
+    10% { background: rgb(119, 0, 120) }
+    70% { background: rgb(0, 30, 120) }
+    100% { background: rgb(101, 0, 120) }
   }
