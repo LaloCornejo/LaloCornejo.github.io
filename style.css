@@ -123,10 +123,10 @@
     animation: pulse 30s infinite;
   }
   @keyframes pulse {
-    0% { background: rgb(0, 85, 131) }
+    0% { background: rgb(0, 57, 87) }
     40% { background: rgb(60, 0, 120) }
     70% { background: rgb(120, 0, 100) }
-    100% { background: rgb(0, 85, 131) }
+    100% { background: rgb(0, 57, 87) }
   }
 
   @keyframes FadeInTitle {
