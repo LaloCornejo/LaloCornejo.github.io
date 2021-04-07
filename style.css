@@ -11,7 +11,8 @@
     width: 100vw;
     height: 100vh;
     margin: 0;
-    animation: pulse 5s infinite;
+    animation: pulse 15s infinite;
+    -webkit-animation: pulse 15s infinite;
   }
   .loader-container {
     width: 100vw;
@@ -26,6 +27,7 @@
   .loader {
     height: 70%;
     animation: loader 30000ms linear infinite; 
+    -webkit-animation: loader 3s linear infinite;
   }
   @keyframes loader{
 
@@ -48,6 +50,7 @@
     justify-content: center;
     border-radius: 0 0 0 0;
     animation: FadeInTitle 6s normal;
+    -webkit-animation: FadeInTitle 6s normal;
   }
   .emboss-txt {
     position: relative;
@@ -100,12 +103,13 @@
     left: 0;
     text-shadow: 0px 0px 100px rgba(0, 153, 255, 0.5);
     animation: cycle 6s linear infinite;
+    -webkit-animation: cycle 6s linear infinite;
   }
   @keyframes cycle {
     0% { text-shadow: 0px 0px 80px rgb(0, 238, 255);}
-    28% { text-shadow: 0px 0px 80px rgb(212, 0, 255);}
-    56% { text-shadow: 0px 0px 80px rgb(0, 255, 179);}
-    74% { text-shadow: 0px 0px 80px rgb(255, 0, 0);}
+    30% { text-shadow: 0px 0px 80px rgb(212, 0, 255);}
+    66% { text-shadow: 0px 0px 80px rgb(0, 255, 179);}
+    88% { text-shadow: 0px 0px 80px rgb(255, 0, 0);}
     100% { text-shadow: 0px 0px 80px rgb(0, 238, 255);}
   }
   .White {
@@ -121,6 +125,7 @@
     height: 100vh;
     width: 100vw;
     animation: pulse 30s infinite;
+    -webkit-animation: pulse 30s infinite;
   }
   @keyframes pulse {
     0% { background: rgb(0, 57, 87) }
