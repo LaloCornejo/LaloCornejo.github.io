@@ -2,114 +2,77 @@
     font-family: BebasNeue;
     src:url(BebasNeue-Regular.otf);
   }
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
   body {
     width: 100vw;
     height: 100vh;
     margin: 0;
     animation: pulse 5s infinite;
-    overflow-x: hidden !important;
   }
-  #preloader {
+  .loader-container {
     width: 100vw;
     height: 100vh;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 11000;
-    position: fixed;
-    display: block;
+    background: black;
+    position: absolute;
     display: flex;
-    justify-content: center;
     align-items: center;
-    background: rgb(0, 0, 0);
-    animation-name: fadeOut ;
-    animation-duration: 3s;
-    animation-iteration-count: 1;
+    justify-content: center;
   }
-  
+
   .loader {
-      display: block;
-      flex-wrap: wrap;
-      height: auto;
+    height: 70%;
+    animation: loader 30000ms linear infinite; 
   }
-  .loader img {
-    width: 100%;
-    height: auto;
-  }
-  @-webkit-keyframes fadeOut {
-    from {
-      opacity: 1; }
-    to {
-      opacity: 0; } 
-    }
-  @keyframes fadeOut {
-    from {
-      opacity: 1; }
-    to {
-      opacity: 0; } 
-    }
-  .fadeOut {
-    -webkit-animation-name: fadeOut;
-    animation-name: fadeOut; 
+  @keyframes loader{
+
   }
     .logo {
-    position: absolute;
+    position: fixed;
     top: 0;
-    left: 0;
-    padding: 5px 0px 0px 20px;
-    height: 50px;
+    right: 0;
+    padding-right: 50px;
+    padding-top: 20px;
+    height: 100px;
   }
-  .container {
+  .Title {
     display: flex;
     position: absolute;
     width: 100vw;
-    height: 25%;
+    height: 10%;
     top: 0;
     left: 0;
-    align-items: center;
     justify-content: center;
     border-radius: 0 0 0 0;
-  }
-  .container2{
-    height: 100vh;
-    width: 90vw;
-    position: absolute;
-    top: 28%;
-    padding-left: 5%;
-    padding-right: 5%;
-    align-items: center;
-    justify-content: center;
-  }
-  .img-prueba {
-    padding: 10px;
-    width: 700px;
-    border-radius: 30px;
+    animation: FadeInTitle 6s normal;
   }
   .emboss-txt {
     position: relative;
     font-size: 150px;
     font-weight: 550;
-    padding-top: 40px;
+    padding-top: 0px;
     font-family: BebasNeue;
     letter-spacing: 5px;
     color:rgb(255, 255, 255);
     text-shadow:
-    0px 0px 1px rgb( 148, 148, 148),
-    0px 1px 1px rgb( 148, 148, 148),
-    0px 2px 1px rgb( 148, 148, 148),
+    0px 0px 1px rgb(116, 116, 116),
+    0px 1px 1px rgb(116, 116, 116),
+    0px 2px 1px rgb(116, 116, 116),
 
-    1px 1px 1px rgb( 148, 148, 148),
-    1px 2px 1px rgb( 148, 148, 148),
-    1px 3px 1px rgb( 148, 148, 148),
+    1px 1px 1px rgb(116, 116, 116),
+    1px 2px 1px rgb(116, 116, 116),
+    1px 3px 1px rgb(116, 116, 116),
 
-    2px 2px 1px rgb( 148, 148, 148),
-    2px 3px 1px rgb( 148, 148, 148),
-    2px 4px 1px rgb( 148, 148, 148),
+    2px 2px 1px rgb(116, 116, 116),
+    2px 3px 1px rgb(116, 116, 116),
+    2px 4px 1px rgb(116, 116, 116),
 
     3px 3px 1px rgb( 148, 148, 148),
-    3px 4px 1px rgb( 148, 148, 148),
-    3px 5px 1px rgb( 148, 148, 148),
+    3px 4px 1px rgb(116, 116, 116),
+    3px 5px 1px rgb(116, 116, 116),
     
     1px 10px 30px rgba( 50, 50, 50, 0.5 ),
     1px 10px 70px rgba( 50, 50, 50, 0.5 ),
@@ -129,7 +92,7 @@
     content: "オタク";
     font-size: 150px;
     font-weight: 550;
-    padding-top: 40px;
+    padding-top: 0px;
     letter-spacing: 5px;
     color: rgb(255, 255, 255);
     position: absolute;
@@ -150,9 +113,9 @@
     filter: brightness(0) invert(1);
   }
   .gradient {
-    height: 100vh;
+    height: 100%;
     width: 100vw;
-    background: linear-gradient(180deg, rgba(0,0,32,1) 20%, rgba(173, 0, 156, 0) 100%);
+    background: linear-gradient(180deg, rgba(0,0,32,1) 15%, rgba(0,0,32,.4) 60%, rgba(173, 0, 156, 0) 100%);
   }
   .bkg-color{
     height: 100vh;
@@ -160,8 +123,14 @@
     animation: pulse 30s infinite;
   }
   @keyframes pulse {
-     0% { background: rgb(101, 0, 120) }
-    10% { background: rgb(119, 0, 120) }
-    70% { background: rgb(0, 30, 120) }
-    100% { background: rgb(101, 0, 120) }
+    0% { background: rgb(0, 85, 131) }
+    40% { background: rgb(60, 0, 120) }
+    70% { background: rgb(120, 0, 100) }
+    100% { background: rgb(0, 85, 131) }
+  }
+
+  @keyframes FadeInTitle {
+    0% { opacity: 0; }
+    35% { opacity: 0; }
+    50% { opacity: 1; }
   }
