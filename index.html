@@ -15,22 +15,32 @@
         </div>
         <!-- end loader -->
 
-        <!--Top Header-->
-        <div class="Title">
-            <a class="link" href="index.html"><img class="logo" src="Logo.gif" alt="#logo" ></a>
-            <div class="emboss-txt">オタク</div>
-        </div>
-        <!--End top header-->
+            <!--Gradient-->
+            <div class="gradient"></div>
+            <!--End gradient-->
+            
+            <!--Top Header-->
+            <div id="Front">
+                <a class="link" href="index.html"><img class="logo" src="Logo.gif" alt="logo" ></a>
+                <div class="emboss-txt">オタク</div>
 
-        <!--Text-->
-        <!--End Text-->
-        
-        <!--Gradient-->
-        <div class="gradient"></div>
-        <!--End gradient-->
+                <div class="SbTitle">"Otaku"</div>
+                    <!--Scroll-->
+                <jmp class="scroll" href="#Index">
+                    <img src="scroll-down.gif" alt="scroll-down">
+                </jmp>
+                    <!--End Scroll-->
+                </div>
+                    <!--End top header-->
+
+            <!--Text-->
+            <div id="Index">
+                <button class="giveaway">Giveaway</button>
+            </div>
+            <!--End Text-->
 
         <script>
-            $(window).on("load", function(){
+            $(window).load("load", function(){
                 $(".loader-container").fadeOut(3000);
             });
         </script>

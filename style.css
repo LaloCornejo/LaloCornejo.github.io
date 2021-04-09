@@ -2,23 +2,28 @@
     font-family: BebasNeue;
     src:url(BebasNeue-Regular.otf);
   }
-    * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  @font-face {
+    font-family: FuturaLight;
+    src:url(FuturaLight.ttf);
+  }
+  @font-face {
+    font-family: FuturaMedium;
+    src:url(FuturaMedium.ttf);
   }
   body {
+    scroll-behavior: smooth;
     width: 100vw;
     height: 100vh;
     margin: 0;
     animation: pulse 15s infinite;
-    -webkit-animation: pulse 15s infinite;
+    -webkit-animation: pulse 30s infinite;
+    overflow-y: auto;
   }
   .loader-container {
     width: 100vw;
     height: 100vh;
     background: black;
-    position: absolute;
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,23 +33,17 @@
     height: 70%;
     animation: loader 30000ms linear infinite; 
     -webkit-animation: loader 3s linear infinite;
+    z-index: 11000;
   }
-  @keyframes loader{
-
-  }
-    .logo {
-    position: fixed;
-    top: 0;
-    right: 0;
-    padding-right: 50px;
-    padding-top: 20px;
-    height: 100px;
-  }
-  .Title {
+  
+/*-------------------------------------
+    TOP SCREEN               
+--------------------------------------*/
+  #Front {
     display: flex;
     position: absolute;
     width: 100vw;
-    height: 10%;
+    height: 100vh;
     top: 0;
     left: 0;
     justify-content: center;
@@ -52,11 +51,20 @@
     animation: FadeInTitle 6s normal;
     -webkit-animation: FadeInTitle 6s normal;
   }
+  .logo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: 50px;
+    padding-top: 20px;
+    height: 100px;
+  }
+
   .emboss-txt {
     position: relative;
     font-size: 150px;
     font-weight: 550;
-    padding-top: 0px;
+    top: 25vh;
     font-family: BebasNeue;
     letter-spacing: 5px;
     color:rgb(255, 255, 255);
@@ -95,7 +103,7 @@
     content: "オタク";
     font-size: 150px;
     font-weight: 550;
-    padding-top: 0px;
+    top: 25vh;
     letter-spacing: 5px;
     color: rgb(255, 255, 255);
     position: absolute;
@@ -105,28 +113,49 @@
     animation: cycle 6s linear infinite;
     -webkit-animation: cycle 6s linear infinite;
   }
-  @keyframes cycle {
-    0% { text-shadow: 0px 0px 80px rgb(0, 238, 255);}
-    30% { text-shadow: 0px 0px 80px rgb(212, 0, 255);}
-    66% { text-shadow: 0px 0px 80px rgb(0, 255, 179);}
-    88% { text-shadow: 0px 0px 80px rgb(255, 0, 0);}
-    100% { text-shadow: 0px 0px 80px rgb(0, 238, 255);}
+  .SbTitle {
+    position: absolute;
+    font-size: 20px;
+    top: 52vh;
+    font-family: FuturaLight;
+    letter-spacing: 5px;
+    color:rgb(255, 255, 255);
   }
+  .scroll{
+    position: absolute;
+    display: flex;
+    height: 15vh;
+    justify-content: center;
+    bottom: 10vh;
+    opacity: .6;
+  }
+
+  .gradient {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(180deg, rgba(0,0,32,1) 15%, rgba(0,0,32,.4) 60%, rgba(173, 0, 156, 0) 100%);
+    position: static;
+    z-index: -1;
+    animation: FadeInGradient 3000ms linear normal;
+    -webkit-animation: FadeInGradient 3000ms linear normal;
+  }
+  /*---------------------------------
+    END TOP SCREEN
+  ----------------------------------*/
+  
+/*------------------------------------
+  INDEX
+------------------------------------*/
+  #Index{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+  }  
   .White {
     -webkit-filter: brightness(0) invert(1);
     filter: brightness(0) invert(1);
   }
-  .gradient {
-    height: 100%;
-    width: 100vw;
-    background: linear-gradient(180deg, rgba(0,0,32,1) 15%, rgba(0,0,32,.4) 60%, rgba(173, 0, 156, 0) 100%);
-  }
-  .bkg-color{
-    height: 100vh;
-    width: 100vw;
-    animation: pulse 30s infinite;
-    -webkit-animation: pulse 30s infinite;
-  }
+
   @keyframes pulse {
     0% { background: rgb(0, 57, 87) }
     40% { background: rgb(60, 0, 120) }
@@ -136,6 +165,21 @@
 
   @keyframes FadeInTitle {
     0% { opacity: 0; }
-    30% { opacity: 0; }
-    40% { opacity: 1; }
+    35% { opacity: 0; }
+    52% { opacity: 1; }
+  }
+  @keyframes FadeInGradient {
+    0% { opacity: 0; }
+    35% { opacity: 0; }
+    60% { opacity: 1; }
+  }
+  @keyframes cycle {
+    0% { text-shadow: 0px 0px 80px rgb(0, 238, 255);}
+    30% { text-shadow: 0px 0px 80px rgb(212, 0, 255);}
+    66% { text-shadow: 0px 0px 80px rgb(0, 255, 179);}
+    88% { text-shadow: 0px 0px 80px rgb(255, 0, 0);}
+    100% { text-shadow: 0px 0px 80px rgb(0, 238, 255);}
+  }
+  @keyframes loader{
+
   }
