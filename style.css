@@ -22,6 +22,9 @@
     -webkit-animation: pulse 30s infinite;
     overflow-x: hidden !important;
   }
+  h1 {
+    font-size: 1.4vw;
+  }
   .loader-container {
     width: 100vw;
     height: 100vh;
@@ -62,9 +65,9 @@
     position: relative;
     top: 0;
     right: 0;
-    padding-right: 80px;
-    padding-top: 20px;
-    height: 100px;
+    padding-right: 4.8vw;
+    padding-top: 1.20vw;
+    height: 6vw;
   }
   .logo_white {
     position: absolute;
@@ -222,10 +225,6 @@
     animation: slideLeft 300ms linear normal;
     -webkit-animation: slideLeft 300ms linear normal;
   }
-  .column-txt.animation{
-    animation: slideLeft 300ms linear normal;
-    -webkit-animation: slideLeft 300ms linear normal;
-  }
   .full{
     float: left;
     width: 100%;
@@ -247,11 +246,11 @@
     bottom: auto;
     height: auto;
     width: auto;
-    font-size: 20px;
+    font-size: 1.204vw;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     margin: 0 auto auto 0;
-    padding: 35px 15px 35px 35px;
+    padding: 20px 15px 35px 35px;
   }
   .go_top{
     position: fixed;
