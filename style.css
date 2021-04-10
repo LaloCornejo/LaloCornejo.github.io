@@ -4,11 +4,11 @@
   }
   @font-face {
     font-family: FuturaLight;
-    src:url(FuturaLight.ttf);
+    src:url(futuraLight.ttf);
   }
   @font-face {
     font-family: FuturaMedium;
-    src:url(FuturaMedium.ttf);
+    src:url(futuraMedium.ttf);
   }
   html{
     scroll-behavior: smooth;
