@@ -11,7 +11,6 @@
     src:url(FuturaMedium.ttf);
   }
   html{
-    font-size: cal(1em + 1vw);
     scroll-behavior: smooth;
   }
   body {
@@ -33,7 +32,8 @@
   }
 
   .loader {
-    height: 100%;
+    height: auto;
+    width: 75vw;
     animation: loader 30000ms linear infinite; 
     -webkit-animation: loader 3s linear infinite;
     z-index: 11000;
@@ -58,7 +58,7 @@
     border-radius: 0 0 0 0;
   }
   .logo {
-    position: absolute;
+    position: relative;
     top: 0;
     right: 0;
     padding-right: 80px;
@@ -131,7 +131,7 @@
   }
   .SbTitle {
     position: absolute;
-    font-size: 1.5em;
+    font-size: 30px;
     top: 54vh;
     font-family: FuturaLight;
     letter-spacing: 5px;
@@ -174,15 +174,25 @@
   .container-gd {
     width: auto;
     height: auto;
-    margin: 20px 150px 50px 150px;
+    margin: 20px 150px 120px 150px;
     align-items: center;
     justify-content: center;
   }
   .txt-gd {
     text-align: left;
-    font-size: 1.2em;
+    font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
+  }
+  .go_top{
+    position: fixed;
+    display: none;
+    align-items: center;
+    right: 20px;
+    bottom: 30px;
+    animation:fadeInContent 3000ms linear normal;
+    -webkit-animation: fadeInContent 300ms linear normal;
+    height: 3vw;
   }
   .White {
     -webkit-filter: brightness(0) invert(1);
