@@ -166,7 +166,7 @@
 ------------------------------------*/
   #gd{
     position: absolute;
-    height: 100vh;
+    height: auto;
     width: 100vw;
     align-items: center;
     justify-content: center;
@@ -174,12 +174,13 @@
   .container-gd {
     width: auto;
     height: auto;
-    margin: 50px 150px 20px 150px;
+    margin: 20px 150px 50px 150px;
     align-items: center;
     justify-content: center;
   }
   .txt-gd {
     text-align: left;
+    font-size: 1.2em;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
   }
