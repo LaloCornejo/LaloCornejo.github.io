@@ -17,7 +17,7 @@
     margin: 0;
     animation: pulse 15s infinite;
     -webkit-animation: pulse 30s infinite;
-    overflow-y: auto;
+    overflow-y: hidden !important;
   }
   .loader-container {
     width: 100vw;
