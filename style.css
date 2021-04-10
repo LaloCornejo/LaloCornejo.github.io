@@ -1,17 +1,18 @@
   @font-face {
     font-family: BebasNeue;
-    src:url(BebasNeue-Regular.otf);
+    src:url(fonts/BebasNeue-Regular.otf);
   }
   @font-face {
     font-family: FuturaLight;
-    src:url(futuraLight.ttf);
+    src:url(fonts/futuraLight.ttf);
   }
   @font-face {
     font-family: FuturaMedium;
-    src:url(futuraMedium.ttf);
+    src:url(fonts/futuraMedium.ttf);
   }
   html{
     scroll-behavior: smooth;
+    
   }
   body {
     width: 100vw;
@@ -42,7 +43,7 @@
 /*-------------------------------------
     TOP SCREEN               
 --------------------------------------*/
-  .content {
+  .header {
     animation: FadeInContent 6s normal;
     -webkit-animation: FadeInContent 6s normal;
   }  
@@ -78,7 +79,7 @@
 
   .emboss-txt {
     position: relative;
-    font-size: 150px;
+    font-size: 10vw;
     font-weight: 550;
     top: 25vh;
     font-family: BebasNeue;
@@ -117,7 +118,7 @@
   }
   .emboss-txt::after{
     content: "オタク";
-    font-size: 150px;
+    font-size: 10vw;
     font-weight: 550;
     top: 25vh;
     letter-spacing: 5px;
@@ -131,7 +132,7 @@
   }
   .SbTitle {
     position: absolute;
-    font-size: 30px;
+    font-size: 2vw;
     top: 54vh;
     font-family: FuturaLight;
     letter-spacing: 5px;
@@ -140,12 +141,13 @@
   .scroll{
     position: absolute;
     display: flex;
-    height: 15vh;
+    height: 5vh;
     justify-content: center;
-    width: 2vw;
+    width: auto;
     bottom: 10vh;
-    opacity: .6;
-    
+    opacity: .8;
+    animation: fadeInScroll 6000ms linear normal;
+    -webkit-animation: FadeInScroll 6000ms linear normal;
   }
 
   .gradient {
@@ -165,24 +167,91 @@
   INDEX
 ------------------------------------*/
   #gd{
-    position: absolute;
-    height: auto;
+    margin-top: 150px;
+    position: static;
+    min-height: 600px;
+    height: auto ;
     width: 100vw;
     align-items: center;
     justify-content: center;
+    padding: 0px 0px 100px 0px;
   }  
-  .container-gd {
-    width: auto;
+  .container {
+    display: block;
+    max-width: 80vw;
+    min-height: 1px;
     height: auto;
-    margin: 20px 150px 120px 150px;
+    padding: 0 60px 0 40px;
+    margin: 0 auto 0 auto;
+    box-sizing: border-box;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .column-right {
+    height: auto;
     align-items: center;
     justify-content: center;
+    position: relative;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin: 35px 0px 35px 0px;
   }
-  .txt-gd {
-    text-align: left;
+  .column-left {
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin: 35px 0px 35px 0px;
+  }
+  .column-txt{
+    margin: 5vw auto auto auto;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 100%;
+    background-color: black;
+    border-radius: 20px;
+    animation: slideLeft 300ms linear normal;
+    -webkit-animation: slideLeft 300ms linear normal;
+  }
+  .column-txt.animation{
+    animation: slideLeft 300ms linear normal;
+    -webkit-animation: slideLeft 300ms linear normal;
+  }
+  .full{
+    float: left;
+    width: 100%;
+  }
+  .img-responsive-med-vertic{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    border-radius: 15px;
+    max-height: 70vh;
+  }
+  #Nino{
+    animation: slideRight 300ms linear normal;
+    -webkit-animation: slideRight 300ms linear normal;
+  }
+  .txt-cl {
+    top: auto;
+    bottom: auto;
+    height: auto;
+    width: auto;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
+    margin: 0 auto auto 0;
+    padding: 35px 15px 35px 35px;
   }
   .go_top{
     position: fixed;
@@ -194,7 +263,7 @@
     -webkit-animation: fadeInContent 300ms linear normal;
     height: 3vw;
   }
-  .White {
+  #White {
     -webkit-filter: brightness(0) invert(1);
     filter: brightness(0) invert(1);
   }
@@ -211,6 +280,10 @@
     35% { opacity: 0; }
     52% { opacity: 1; }
   }
+  @keyframes FadeInScroll {
+    0% { opacity: 0;}
+    70% { opacity: .8; }
+  }
   @keyframes FadeInGradient {
     0% { opacity: 0; }
     35% { opacity: 0; }
@@ -223,6 +296,11 @@
     88% { text-shadow: 0px 0px 80px rgb(255, 0, 0);}
     100% { text-shadow: 0px 0px 80px rgb(0, 238, 255);}
   }
-  @keyframes loader{
-
+  @keyframes slideRight{
+    0% { transform: translateX( 100px);}
+    100% { transform: translateX( 0px);}
+  }
+  @keyframes slideLeft{
+    0% { transform: translateX( -100px);}
+    100% { transform: translateX( 0px);}
   }
