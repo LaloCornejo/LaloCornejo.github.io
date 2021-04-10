@@ -10,6 +10,10 @@
     font-family: FuturaMedium;
     src:url(FuturaMedium.ttf);
   }
+  html{
+    font-size: cal(1em + 1vw);
+    scroll-behavior: smooth;
+  }
   body {
     width: 100vw;
     height: 100vh;
@@ -29,7 +33,7 @@
   }
 
   .loader {
-    height: 70%;
+    height: 100%;
     animation: loader 30000ms linear infinite; 
     -webkit-animation: loader 3s linear infinite;
     z-index: 11000;
@@ -38,7 +42,12 @@
 /*-------------------------------------
     TOP SCREEN               
 --------------------------------------*/
-  #Front {
+  .content {
+    animation: FadeInContent 6s normal;
+    -webkit-animation: FadeInContent 6s normal;
+  }  
+
+  .Title {
     display: flex;
     position: absolute;
     width: 100vw;
@@ -47,16 +56,24 @@
     left: 0;
     justify-content: center;
     border-radius: 0 0 0 0;
-    animation: FadeInTitle 6s normal;
-    -webkit-animation: FadeInTitle 6s normal;
   }
   .logo {
     position: absolute;
     top: 0;
     right: 0;
-    padding-right: 50px;
+    padding-right: 80px;
     padding-top: 20px;
     height: 100px;
+  }
+  .logo_white {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: 80px;
+    padding-top: 20px;
+    height: 100px;
+    -webkit-filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1);
   }
 
   .emboss-txt {
@@ -114,8 +131,8 @@
   }
   .SbTitle {
     position: absolute;
-    font-size: 20px;
-    top: 52vh;
+    font-size: 1.5em;
+    top: 54vh;
     font-family: FuturaLight;
     letter-spacing: 5px;
     color:rgb(255, 255, 255);
@@ -125,8 +142,10 @@
     display: flex;
     height: 15vh;
     justify-content: center;
+    width: 2vw;
     bottom: 10vh;
     opacity: .6;
+    
   }
 
   .gradient {
@@ -135,8 +154,8 @@
     background: linear-gradient(180deg, rgba(0,0,32,1) 15%, rgba(0,0,32,.4) 60%, rgba(173, 0, 156, 0) 100%);
     position: static;
     z-index: -1;
-    animation: FadeInGradient 3000ms linear normal;
-    -webkit-animation: FadeInGradient 3000ms linear normal;
+    animation: FadeInGradient 2500ms linear normal;
+    -webkit-animation: FadeInGradient 2500ms linear normal;
   }
   /*---------------------------------
     END TOP SCREEN
@@ -145,11 +164,25 @@
 /*------------------------------------
   INDEX
 ------------------------------------*/
-  #Index{
+  #gd{
     position: absolute;
     height: 100vh;
     width: 100vw;
+    align-items: center;
+    justify-content: center;
   }  
+  .container-gd {
+    width: auto;
+    height: auto;
+    margin: 50px 150px 20px 150px;
+    align-items: center;
+    justify-content: center;
+  }
+  .txt-gd {
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+  }
   .White {
     -webkit-filter: brightness(0) invert(1);
     filter: brightness(0) invert(1);
@@ -162,7 +195,7 @@
     100% { background: rgb(0, 57, 87) }
   }
 
-  @keyframes FadeInTitle {
+  @keyframes FadeInContent {
     0% { opacity: 0; }
     35% { opacity: 0; }
     52% { opacity: 1; }
@@ -170,7 +203,7 @@
   @keyframes FadeInGradient {
     0% { opacity: 0; }
     35% { opacity: 0; }
-    60% { opacity: 1; }
+    50% { opacity: 1; }
   }
   @keyframes cycle {
     0% { text-shadow: 0px 0px 80px rgb(0, 238, 255);}
