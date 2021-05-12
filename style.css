@@ -155,6 +155,16 @@
     animation: fadeInScroll 6000ms linear normal;
     -webkit-animation: FadeInScroll 6000ms linear normal;
   }
+  .scroll2{
+    position: absolute;
+    display: flex;
+    height: 3vw;
+    justify-content: center;
+    bottom: 10vh;
+    opacity: .8;
+    animation: fadeInScroll 6000ms linear normal;
+    -webkit-animation: FadeInScroll 6000ms linear normal;
+  }
 
   .gradient {
     height: 100vh;
@@ -169,10 +179,19 @@
   /*---------------------------------
     END TOP SCREEN
   ----------------------------------*/
-  
-/*------------------------------------
-  INDEX
-------------------------------------*/
+  #spacer1{
+    height: 20vh;
+    width: auto;
+    color: black;
+  }
+  .spacer{
+    height: 20vh;
+    width: auto;
+    color: black;
+  }
+  /*------------------------------------
+     INDEX
+  ------------------------------------*/
   #gd{
     margin-top: 20vh;
     position: static;
@@ -189,7 +208,7 @@
     max-width: 80vw;
     min-height: 1px;
     height: auto;
-    max-height: 50vh;
+    max-height: 80vh;
     padding: 0 60px 0 40px;
     margin: 0 auto 0 auto;
     box-sizing: border-box;
@@ -207,6 +226,18 @@
     flex: 0 0 50%;
     max-width: 50%;
     margin: 35px 0px 35px 0px;
+    border-radius: 20px;
+  }
+  .column-right-2 {
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin: 35px 0px 35px 0px;
+    border-radius: 20px;
   }
   .column-left {
     height: auto;
@@ -218,7 +249,17 @@
     max-width: 50%;
     margin: 35px 0px 35px 0px;
   }
-  .column-txt{
+  .column-left-3 {
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin: 35px 0px 35px 0px;
+  }
+  .column-txt-l{
     margin: 5vw auto auto auto;
     align-items: center;
     justify-content: center;
@@ -230,6 +271,19 @@
     border-radius: 20px;
     animation: slideLeft 300ms linear normal;
     -webkit-animation: slideLeft 300ms linear normal;
+  }
+  .column-txt-r{
+    margin: 5vw auto auto auto;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 100%;
+    background-color: black;
+    border-radius: 20px;
+    animation: slideRight 300ms linear normal;
+    -webkit-animation: slideRight 300ms linear normal;
   }
   .full{
     float: left;
@@ -248,6 +302,14 @@
   #Nino{
     animation: slideRight 300ms linear normal;
     -webkit-animation: slideRight 300ms linear normal;
+  }
+  #Miku{
+    animation: slideLeft 300ms linear normal;
+    -webkit-animation: slideLeft 300ms linear normal;
+  }
+  #Chika{
+    animation: slideLeft 300ms linear normal;
+    -webkit-animation: slideLeft 300ms linear normal;
   }
   .txt-cl {
     top: auto;
