@@ -140,7 +140,7 @@
   .SbTitle {
     position: absolute;
     font-size: 2vw;
-    bottom: 0;
+    bottom: 35vh;
     font-family: FuturaLight;
     letter-spacing: 8px;
     color:rgb(255, 255, 255);
