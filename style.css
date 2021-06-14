@@ -77,9 +77,9 @@
     position: absolute;
     top: 0;
     right: 0;
-    padding-right: 80px;
-    padding-top: 20px;
-    height: 100px;
+    padding-right: 5vw;
+    padding-top: 2vh;
+    height: 10vh;
     -webkit-filter: brightness(0) invert(1);
     filter: brightness(0) invert(1);
   }
