@@ -79,7 +79,7 @@
     right: 0;
     padding-right: 5vw;
     padding-top: 2vh;
-    height: 20vh;
+    height: 10vh;
     -webkit-filter: brightness(0) invert(1);
     filter: brightness(0) invert(1);
   }
@@ -207,7 +207,7 @@
     display: block;
     max-width: 80vw;
     min-height: 1px;
-    height: auto;
+    height: auto + 30vh;
     max-height: 80vh;
     padding: 0 60px 0 40px;
     margin: 0 auto 0 auto;
