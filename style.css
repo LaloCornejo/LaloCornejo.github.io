@@ -79,7 +79,7 @@
     right: 0;
     padding-right: 5vw;
     padding-top: 2vh;
-    height: 10vh;
+    height: 20vh;
     -webkit-filter: brightness(0) invert(1);
     filter: brightness(0) invert(1);
   }
@@ -140,9 +140,9 @@
   .SbTitle {
     position: absolute;
     font-size: 2vw;
-    top: 54vh;
+    bottom: 0;
     font-family: FuturaLight;
-    letter-spacing: 5px;
+    letter-spacing: 8px;
     color:rgb(255, 255, 255);
   }
   .scroll{
@@ -212,6 +212,7 @@
     padding: 0 60px 0 40px;
     margin: 0 auto 0 auto;
     box-sizing: border-box;
+    background-color: white;
   }
   .row {
     display: flex;
