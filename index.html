@@ -31,7 +31,7 @@
 
                 <div class="SbTitle">"Otaku"</div>
                     <!--Scroll-->
-                <a class="scroll" href="#spacer1" >
+                <a class="scroll" href="#C1" >
                     <img id="White" src="img/scroll-down2.gif" alt="scroll-down">
                 </a>
                     <!--End Scroll-->
@@ -41,9 +41,8 @@
             <!--End header-->
 
                     <!--Text-->
+                    <div class="spacer_top"></div>
                     <!--Container 1-->
-                    <div id="spacer1">
-                    </div>
                     <div id="C1">
                         <div class="container">
                             <div class="row">
@@ -65,9 +64,8 @@
                             </div>
                         </div>
                     </div>
+                    <div class="spacer_bottom"></div>
                     <!--End Container 2-->
-
-                    <div class="spacer"></div>
 
                     <!--Container 2-->
                     <div id="C2">
@@ -94,10 +92,10 @@
                             </div>
                         </div>
                     </div>
+                    <div class="spacer_bottom"></div>
                     <!--End Container 2-->
 
-                    <div class="spacer"></div>
-
+                    <div class="spacer_top"></div>
                     <!--Container 3-->
                     <div id="C3">
                         <div class="container">
@@ -121,8 +119,6 @@
                     </div>
                     <!--End Container 3-->
 
-                    <div class="spacer"></div>
-
                     <!--End Text-->
             
                 <a href="#home" ><img class="go_top" src="img/go-top.gif" alt="#top"></a>
@@ -145,21 +141,21 @@
         </script>
         <script>
             $(window).scroll(function () {
-                if ($(this).scrollTop() > 560) {
+                if ($(this).scrollTop() > 500) {
                     $('#Nino').fadeIn();
                     $('.column-left').fadeIn();
                 } else {
                     $('#Nino').fadeOut();
                     $('.column-left').fadeOut();
                 }
-                if ($(this).scrollTop() > 560) {
+                if ($(this).scrollTop() > 1080) {
                     $('#Miku').fadeIn();
                     $('.column-right-2').fadeIn();
                 } else {
                     $('#Miku').fadeOut();
                     $('.column-right-2').fadeOut();
                 }
-                if ($(this).scrollTop() > 1050) {
+                if ($(this).scrollTop() > 2050) {
                     $('#Chika').fadeIn();
                     $('.column-left-3').fadeIn();
                 } else {
